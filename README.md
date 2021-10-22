@@ -15,3 +15,7 @@ Use in conjunction with modHeader. This mock API recognizes the following `uniqu
 - `not_mismatched_is_null`: Returns a null response with a matching unique number
 - `date_too_early`: Returns a `requestDate` that is outside the expected range
 - `invalid_time_slot`: Returns a `timeDesc` that is outside the expected range
+
+Sending no `uniqueNumber` request header or `uniqueNumber` with an empty string both result in the `missing_unique_number` response.
+
+All other values return an "API Gateway response is not 200" error.
