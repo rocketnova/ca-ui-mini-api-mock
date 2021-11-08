@@ -15,3 +15,4 @@ Use in conjunction with modHeader. This mock API recognizes the following `uniqu
 - `not_mismatched_is_null`: Returns a null response with a matching unique number
 - `date_too_early`: Returns a `requestDate` that is outside the expected range
 - `invalid_time_slot`: Returns a `timeDesc` that is outside the expected range
+- `invalid_feded_bye`: Returns a response for a valid `isBYE` FED-ED, but with empty string for `benefitYearEndDate`
