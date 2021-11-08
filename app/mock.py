@@ -171,6 +171,24 @@ class ClaimResource:
                     ]
                 }
 
+            case "invalid_feded_bye":
+                return {
+                    "uniqueNumber": "invalid_feded_bye",
+                    "claimDetails": {
+                        "programType": "FED-ED Extension",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasPendingWeeks": False,
+                    "pendingDetermination": [],
+                    "isBYE": True
+                }
 
             case _:
                 return None
