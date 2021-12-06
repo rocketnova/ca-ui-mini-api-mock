@@ -1,5 +1,6 @@
 from wsgiref.simple_server import make_server
 from urllib.parse import parse_qs
+from datetime import datetime, timedelta
 
 import falcon
 
@@ -42,6 +43,34 @@ class ClaimResource:
                     "pendingDetermination": [
                         {
                             "scheduleDate": "2021-09-22T00:00:00",
+                            "timeSlotDesc": "8-10",
+                            "requestDate": "2021-09-16T00:00:00",
+                            "determinationStatus": None,
+                            "willCallIndicator": False,
+                            "spokenLanguageCode": "E",
+                            "spokenLanguageDesc": "English"
+                        }
+                    ]
+                }
+
+            case "scenario2":
+                return {
+                    "uniqueNumber": "scenario2",
+                    "claimDetails": {
+                        "programType": "UI",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasPendingWeeks": False,
+                    "pendingDetermination": [
+                        {
+                            "scheduleDate": (datetime.now() + timedelta(days=1)).isoformat(),
                             "timeSlotDesc": "8-10",
                             "requestDate": "2021-09-16T00:00:00",
                             "determinationStatus": None,
