@@ -4,6 +4,12 @@ An extremely tiny mock API gateway for testing against https://github.com/cagov/
 
 Primary use case is to test against strange and unlikely edge cases.
 
+## How to Run
+
+1. Make sure `docker` and `docker-compose` are installed
+2. Run `docker-compose up -d --build` to build the image and start the container in the background
+3. Connect to the API at `localhost:8888`
+
 ## Usage
 
 Use in conjunction with modHeader. This mock API recognizes the following `uniqueNumber` values:
