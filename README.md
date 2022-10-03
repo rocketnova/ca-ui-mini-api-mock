@@ -18,7 +18,18 @@ Use in conjunction with modHeader. This mock API recognizes the following `uniqu
 Happy paths values:
 
 - `happy_path`: Returns a correctly formed API gateway response
+- `scenario1`: Returns a correctly formed API gateway response for scenario 1
 - `scenario2`: Returns a correctly formed API gateway response for scenario 2
+- `scenario3`: Returns a correctly formed API gateway response for scenario 3
+- `scenario4`: Returns a correctly formed API gateway response for scenario 4
+- `scenario5`: Returns a correctly formed API gateway response for scenario 5
+- `scenario6`: Returns a correctly formed API gateway response for scenario 6
+- `scenario7`: Returns a correctly formed API gateway response for scenario 7
+- `scenario8`: Returns a correctly formed API gateway response for scenario 8
+- `scenario9`: Returns a correctly formed API gateway response for scenario 9
+- `scenario10`: Returns a correctly formed API gateway response for scenario 10
+- `scenario11`: Returns a correctly formed API gateway response for scenario 11
+- `scenario12`: Returns a correctly formed API gateway response for scenario 12
 
 Unhappy path values:
 
