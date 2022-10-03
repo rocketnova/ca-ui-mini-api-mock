@@ -39,10 +39,37 @@ class ClaimResource:
                         "monetaryStatus": "Active"
                     },
                     "hasCertificationWeeksAvailable": False,
-                    "hasPendingWeeks": False,
+                    "hasValidPendingWeeks": False,
                     "pendingDetermination": [
                         {
                             "scheduleDate": "2021-09-22T00:00:00",
+                            "timeSlotDesc": "8-10",
+                            "requestDate": "2021-09-16T00:00:00",
+                            "determinationStatus": None,
+                            "willCallIndicator": False,
+                            "spokenLanguageCode": "E",
+                            "spokenLanguageDesc": "English"
+                        }
+                    ]
+                }
+
+            case "scenario1":
+                return {
+                    "uniqueNumber": "scenario1",
+                    "claimDetails": {
+                        "programType": "UI",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "pendingDetermination": [
+                        {
                             "timeSlotDesc": "8-10",
                             "requestDate": "2021-09-16T00:00:00",
                             "determinationStatus": None,
@@ -67,7 +94,7 @@ class ClaimResource:
                         "monetaryStatus": "Active"
                     },
                     "hasCertificationWeeksAvailable": False,
-                    "hasPendingWeeks": False,
+                    "hasValidPendingWeeks": False,
                     "pendingDetermination": [
                         {
                             "scheduleDate": (datetime.now() + timedelta(days=1)).isoformat(),
@@ -81,12 +108,200 @@ class ClaimResource:
                     ]
                 }
 
+            case "scenario3":
+                return {
+                    "uniqueNumber": "scenario3",
+                    "claimDetails": {
+                        "programType": "UI",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "pendingDetermination": [
+                        {
+                            "scheduleDate": (datetime.now() - timedelta(days=1)).isoformat(),
+                            "timeSlotDesc": "8-10",
+                            "requestDate": "2021-09-16T00:00:00",
+                            "determinationStatus": None,
+                            "willCallIndicator": False,
+                            "spokenLanguageCode": "E",
+                            "spokenLanguageDesc": "English"
+                        }
+                    ]
+                }
+
+            case "scenario4":
+                return {
+                    "uniqueNumber": "scenario4",
+                    "claimDetails": {
+                        "programType": "UI",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": True
+                }
+
+            case "scenario5":
+                return {
+                    "uniqueNumber": "scenario5",
+                    "claimDetails": {
+                        "programType": "UI",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": True,
+                    "hasValidPendingWeeks": False
+                }
+
+            case "scenario6":
+                return {
+                    "uniqueNumber": "scenario6",
+                    "claimDetails": {
+                        "programType": "UI",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "isBYE": False
+                }
+
+            case "scenario7":
+                return {
+                    "uniqueNumber": "scenario7",
+                    "claimDetails": {
+                        "programType": "UI",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "isBYE": True
+                }
+
+            case "scenario8":
+                return {
+                    "uniqueNumber": "scenario8",
+                    "claimDetails": {
+                        "programType": "PUA",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "isBYE": True
+                }
+
+            case "scenario9":
+                return {
+                    "uniqueNumber": "scenario9",
+                    "claimDetails": {
+                        "programType": "DUA",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "isBYE": True
+                }
+
+            case "scenario10":
+                return {
+                    "uniqueNumber": "scenario10",
+                    "claimDetails": {
+                        "programType": "FED-ED Extension",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "isBYE": True
+                }
+
+            case "scenario11":
+                return {
+                    "uniqueNumber": "scenario11",
+                    "claimDetails": {
+                        "programType": "PEUC - Tier 1 Extension",
+                        "benefitYearStartDate": "2013-07-21T00:00:00",
+                        "benefitYearEndDate": "2014-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "isBYE": True
+                }
+
+            case "scenario12":
+                return {
+                    "uniqueNumber": "scenario12",
+                    "claimDetails": {
+                        "programType": "FED-ED Extension",
+                        "benefitYearStartDate": "2021-07-21T00:00:00",
+                        "benefitYearEndDate": "2022-07-19T00:00:00",
+                        "claimBalance": 5632.00,
+                        "weeklyBenefitAmount": 256.00,
+                        "lastPaymentIssued": "2016-08-26T00:00:00",
+                        "lastPaymentAmount": 336.00,
+                        "monetaryStatus": "Active"
+                    },
+                    "hasCertificationWeeksAvailable": False,
+                    "hasValidPendingWeeks": False,
+                    "isBYE": True
+                }
+
             case "missing_unique_number":
                 return {
                   "uniqueNumber": None,
                   "claimDetails": None,
                   "hasCertificationWeeksAvailable": False,
-                  "hasPendingWeeks": False,
+                  "hasValidPendingWeeks": False,
                   "pendingDetermination": None
                 }
 
@@ -104,7 +319,7 @@ class ClaimResource:
                     "monetaryStatus": ""
                   },
                   "hasCertificationWeeksAvailable": False,
-                  "hasPendingWeeks": False,
+                  "hasValidPendingWeeks": False,
                   "pendingDetermination": []
                 }
 
@@ -122,7 +337,7 @@ class ClaimResource:
                     "monetaryStatus": ""
                   },
                   "hasCertificationWeeksAvailable": False,
-                  "hasPendingWeeks": False,
+                  "hasValidPendingWeeks": False,
                   "pendingDetermination": []
                 }
 
@@ -140,7 +355,7 @@ class ClaimResource:
                         "monetaryStatus": "Active"
                     },
                     "hasCertificationWeeksAvailable": False,
-                    "hasPendingWeeks": False,
+                    "hasValidPendingWeeks": False,
                     "pendingDetermination": []
                 }
 
@@ -158,7 +373,7 @@ class ClaimResource:
                         "monetaryStatus": "Active"
                     },
                     "hasCertificationWeeksAvailable": False,
-                    "hasPendingWeeks": False,
+                    "hasValidPendingWeeks": False,
                     "pendingDetermination": [
                         {
                             "scheduleDate": "",
@@ -186,7 +401,7 @@ class ClaimResource:
                         "monetaryStatus": "Active"
                     },
                     "hasCertificationWeeksAvailable": False,
-                    "hasPendingWeeks": False,
+                    "hasValidPendingWeeks": False,
                     "pendingDetermination": [
                         {
                             "scheduleDate": "2021-12-01T00:00:00",
@@ -214,7 +429,7 @@ class ClaimResource:
                         "monetaryStatus": "Active"
                     },
                     "hasCertificationWeeksAvailable": False,
-                    "hasPendingWeeks": False,
+                    "hasValidPendingWeeks": False,
                     "pendingDetermination": [],
                     "isBYE": True
                 }
